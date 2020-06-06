@@ -38,6 +38,7 @@ import nestedRouter from './modules/nested'
  * a base page that does not have permission requirements
  * all roles can be accessed
  */
+const loginView = 'login/index'
 export const constantRoutes = [
   {
     path: '/redirect',
@@ -52,7 +53,7 @@ export const constantRoutes = [
   },
   {
     path: '/login',
-    component: () => import('@/views/login/index'),
+    component: () => import(`@/views/${loginView}`),
     hidden: true
   },
   {
